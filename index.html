@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Inscripción de Estudiantes | E.B.N. Nuevo Horizonte</title>
+    <title>Sistema de Inscripción de Estudiantes | U.E.N. Nuevo Horizonte</title>
     <link rel="icon" type="image/png" href="img/logo_uni.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -20,7 +21,7 @@
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#comunidad">Comunidad</a></li>
-                    <li><a href="#tecnologias">Herramientas de Desarrollo</a></li>
+                    <li><a href="#tecnologias">Herramientas</a></li>
                     <li><a href="#solucion">Solución</a></li>
                     <li><a href="#galeria">Demostración</a></li>
                     <li><a href="#manuales">Descargas</a></li>
@@ -33,7 +34,7 @@
     <div id="inicio" class="hero">
         <div class="hero-content">
             <h1>Sistema Integral de Inscripción de Estudiantes</h1>
-            <p class="subtitle">Escuela Básica Nacional "Nuevo Horizonte"</p>
+            <p class="subtitle">U.E.N. "Nuevo Horizonte"</p>
             <p class="description">Modernizando la gestión educativa mediante tecnología web eficiente, segura y soberana.</p>
         </div>
     </div>
@@ -55,36 +56,86 @@
         </div>
 
         <section id="comunidad">
-            <h2>Nuestra Comunidad: E.B.N. Nuevo Horizonte</h2>
-            <p>La <strong>Escuela Básica Nacional "Nuevo Horizonte"</strong> es el centro de formación fundamental para los niños y niñas del sector. Como institución pública, atiende a una matrícula significativa de estudiantes, garantizando el derecho a la educación.</p>
             
-            <p>Nuestro proyecto se integra con la comunidad educativa (personal administrativo, docentes, padres y representantes) para fortalecer sus capacidades tecnológicas.</p>
+            <div class="com-header">
+                <div class="com-logo-container">
+                    <img src="img/logo_uennh_png.png" alt="Logo U.E.N. Nuevo Horizonte" class="com-logo">
+                </div>
+                <div class="com-title">
+                    <h2>Unidad Educativa Nacional "Nuevo Horizonte"</h2>
+                    <p class="com-address">
+                        <i class="fa-solid fa-map-location-dot"></i> 
+                        Parroquia Sucre, Catia, Gramoven - Barrio Nuevo Horizonte.<br>
+                        Calle Principal La Parada, Edificio U.E.N “Nuevo Horizonte”.
+                    </p>
+                </div>
+            </div>
+
+            <div class="stats-box">
+                <div class="stat-item">
+                    <span class="stat-number">432</span>
+                    <span class="stat-label">Nivel Básico</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">540</span>
+                    <span class="stat-label">Nivel Diversificado</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item highlight">
+                    <span class="stat-number">972</span>
+                    <span class="stat-label">Matrícula Total (Año Pasado)</span>
+                </div>
+            </div>
 
             <hr style="margin: 30px 0; border-top: 1px dashed #ccc;">
-            
+
             <h3 style="color: var(--color-marino); margin-bottom: 20px;">Diagnóstico de la Problemática</h3>
-            <p>A pesar de su excelente labor académica, se detectó que el proceso administrativo presentaba serias dificultades que afectaban a la comunidad escolar:</p>
-            
-            <div class="comparison-grid">
-                <div class="info-card problem">
-                    <h3>❌ Situación Detectada</h3>
-                    <ul>
-                        <li>Registro en libros físicos deteriorados.</li>
-                        <li>Duplicidad de datos de estudiantes.</li>
-                        <li>Dificultad para generar reportes (Matrícula inicial).</li>
-                        <li>Lentitud en el proceso de inscripción (20 min/alumno).</li>
-                    </ul>
+            <p style="margin-bottom: 20px;">
+                Evidencia fotográfica de la situación actual (Proceso Manual):
+            </p>
+
+            <div class="problem-visuals">
+                
+                <div class="problem-card-visual">
+                    <div class="img-wrapper-phone">
+                        <img src="img/foto1.jpg" alt="Retraso Administrativo">
+                    </div>
+                    <h4>Retraso Administrativo</h4>
+                    <p>Libros físicos deteriorados.</p>
                 </div>
+
+                <div class="problem-card-visual">
+                    <div class="img-wrapper-phone">
+                        <img src="img/foto2.jpg" alt="Lentitud Trámite">
+                    </div>
+                    <h4>Lentitud en Trámites</h4>
+                    <p>Largas colas de espera.</p>
+                </div>
+
+                <div class="problem-card-visual">
+                    <div class="img-wrapper-phone">
+                        <img src="img/foto4.jpg" alt="Proceso Saturado">
+                    </div>
+                    <h4>Proceso Saturado</h4>
+                    <p>Aglomeración de personas.</p>
+                </div>
+
+            </div>
+
+            <div class="comparison-grid" style="margin-top: 40px;">
                 <div class="info-card solution" id="solucion">
-                    <h3>✅ Transformación Digital</h3>
+                    <h3>✅ Nuestra Solución Tecnológica</h3>
+                    <p>Para mitigar esta problemática, proponemos:</p>
                     <ul>
-                        <li>Base de datos digital centralizada y segura.</li>
-                        <li>Validación automática de documentos (Cédula, Edad).</li>
+                        <li>Base de datos digital centralizada.</li>
+                        <li>Validación automática de documentos.</li>
                         <li>Generación de planillas PDF al instante.</li>
-                        <li>Proceso optimizado (5 min/alumno).</li>
+                        <li>Reducción drástica del tiempo de atención.</li>
                     </ul>
                 </div>
             </div>
+
         </section>
 
         <section id="tecnologias">
@@ -92,7 +143,6 @@
             <p style="text-align: center;">Stack tecnológico seleccionado para garantizar rendimiento, seguridad y escalabilidad.</p>
             
             <div class="tech-categories">
-                
                 <div class="tech-card">
                     <h3>📐 Modelado</h3>
                     <ul>
@@ -106,22 +156,19 @@
                         </li>
                     </ul>
                 </div>
-
                 <div class="tech-card">
                     <h3>🚀 Servicios</h3>
                     <ul>
                         <li>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9BZBoug_eDR7zTi0D8D3tfo7UblI_WKPPyw&s" alt="XAMPP" class="tech-icon">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Xampp_logo.svg/512px-Xampp_logo.svg.png" alt="XAMPP" class="tech-icon">
                             <span>XAMPP</span>
                         </li>
                         <li>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" alt="Apache" class="tech-icon">
-                            <span>Apache</span> 
-                            <span class="version">v2.4.58</span>
+                            <span>Apache</span> <span class="version">v2.4.58</span>
                         </li>
                     </ul>
                 </div>
-
                 <div class="tech-card">
                     <h3>💾 Base de Datos</h3>
                     <ul>
@@ -131,24 +178,20 @@
                         </li>
                         <li>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mariadb/mariadb-original.svg" alt="MariaDB" class="tech-icon">
-                            <span>MariaDB</span> 
-                            <span class="version">v11.8</span>
+                            <span>MariaDB</span> <span class="version">v11.8</span>
                         </li>
                     </ul>
                 </div>
-
                 <div class="tech-card">
                     <h3>💻 Lenguajes</h3>
                     <ul>
                         <li>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="tech-icon">
-                            <span>PHP</span> 
-                            <span class="version">v8.3.8</span>
+                            <span>PHP</span> <span class="version">v8.3.8</span>
                         </li>
                         <li>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" class="tech-icon">
-                            <span>JavaScript</span> 
-                            <span class="version">ES6</span>
+                            <span>JavaScript</span> <span class="version">ES6</span>
                         </li>
                         <li>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt="JQuery" class="tech-icon">
@@ -156,28 +199,23 @@
                         </li>
                     </ul>
                 </div>
-
                 <div class="tech-card">
                     <h3>🎨 Diseño</h3>
                     <ul>
                         <li>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="tech-icon">
-                            <span>HTML</span> 
-                            <span class="version">v5</span>
+                            <span>HTML</span> <span class="version">v5</span>
                         </li>
                         <li>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="tech-icon">
-                            <span>CSS</span> 
-                            <span class="version">v3</span>
+                            <span>CSS</span> <span class="version">v3</span>
                         </li>
                         <li>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="tech-icon">
-                            <span>Bootstrap</span> 
-                            <span class="version">v5.3.8</span>
+                            <span>Bootstrap</span> <span class="version">v5.3.8</span>
                         </li>
                     </ul>
                 </div>
-
                 <div class="tech-card">
                     <h3>📚 Librerías</h3>
                     <ul>
@@ -199,7 +237,6 @@
                         </li>
                     </ul>
                 </div>
-
                 <div class="tech-card">
                     <h3>🛠️ Complementos</h3>
                     <ul>
@@ -221,25 +258,21 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
         </section>
 
         <section id="galeria">
             <h2>Demostración del Sistema</h2>
             <p>Interfaz intuitiva diseñada para facilitar la labor del personal administrativo.</p>
-            
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <img src="img/login_sistema.jpg" alt="Login del Sistema">
                     <div class="caption">Acceso Seguro (Login)</div>
                 </div>
-
                 <div class="gallery-item">
                     <img src="img/dashboard.jpg" alt="Panel Principal">
                     <div class="caption">Panel de Control (Dashboard)</div>
                 </div>
-
                 <div class="gallery-item">
                     <img src="img/registro.jpg" alt="Módulo de Inscripción">
                     <div class="caption">Formulario de Inscripción</div>
@@ -250,7 +283,6 @@
         <section id="manuales">
             <h2>Documentación Técnica</h2>
             <p>Recursos necesarios para la operación y mantenimiento del sistema.</p>
-            
             <div class="manual-grid">
                 <a href="docs/Manual_Usuario.pdf" class="btn-download" download>
                     <span class="icon-doc">📘</span>
@@ -259,7 +291,6 @@
                         <br><small>Guía para operadores</small>
                     </div>
                 </a>
-                
                 <a href="docs/Manual_Tecnico.pdf" class="btn-download" download>
                     <span class="icon-doc">⚙️</span>
                     <div>
@@ -273,7 +304,6 @@
         <section id="equipo">
             <h2>Equipo Desarrollador</h2>
             <p>Estudiantes del PNF en Informática comprometidos con la solución.</p>
-
             <div class="team-grid">
                 <div class="student-card">
                     <img src="img/yusmelya.png" alt="Yusmely Araque" class="student-photo">

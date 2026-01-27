@@ -26,26 +26,22 @@ body {
 }
 
 /* =========================================
-   CINTILLO GUBERNAMENTAL (VERSIÓN SUTIL/DELGADA)
+   CINTILLO GUBERNAMENTAL
    ========================================= */
 .cintillo-gov {
     background-color: var(--color-blanco);
     width: 100%;
-    
-    /* MODIFICACIÓN: Altura reducida a 55px (aprox 1.5cm) */
     height: 55px; 
-    
     display: flex;
     justify-content: space-between; 
     align-items: center;            
     padding: 0 5%;
-    border-bottom: 1px solid #e0e0e0; /* Borde más sutil */
+    border-bottom: 1px solid #e0e0e0;
     position: relative;
     z-index: 1001;
 }
 
 .cintillo-gov img {
-    /* Al ser más pequeño el cintillo, usamos el 80% de la altura */
     height: 80%; 
     width: auto;
     object-fit: contain;
@@ -90,7 +86,7 @@ nav a:hover {
 }
 
 /* =========================================
-   HERO SECTION (PORTADA)
+   HERO SECTION
    ========================================= */
 .hero {
     background: linear-gradient(135deg, var(--color-marino) 0%, #004e92 100%);
@@ -114,7 +110,7 @@ nav a:hover {
 }
 
 /* =========================================
-   CONTENEDOR Y SECCIONES
+   CONTENEDOR GLOBAL
    ========================================= */
 .container {
     width: 90%; max-width: 1100px; margin: 0 auto;
@@ -156,30 +152,118 @@ h2 {
 hr { border: 0; border-top: 1px solid #eee; margin: 15px 0; }
 
 /* =========================================
-   GRID DE COMPARACIÓN (PROBLEMA/SOLUCIÓN)
+   SECCIÓN COMUNIDAD
+   ========================================= */
+.com-header {
+    display: flex; align-items: center; gap: 25px; margin-bottom: 30px;
+}
+.com-logo-container { flex-shrink: 0; }
+
+/* --- MODIFICACIÓN DEL LOGO AQUÍ --- */
+.com-logo {
+    width: auto;         /* Ancho automático */
+    height: 120px;       /* Altura fija para buen tamaño */
+    object-fit: contain; /* Muestra el logo completo sin cortar */
+    border-radius: 0;    /* Elimina el círculo */
+    border: none;        /* Elimina bordes extraños */
+    box-shadow: none;    /* Limpio, sin sombra de caja cuadrada */
+}
+
+.com-title h2 { border: none; padding: 0; margin: 0 0 10px 0; font-size: 1.6rem; }
+.com-address { color: #666; font-size: 0.95rem; line-height: 1.4; }
+
+/* Caja de Estadísticas */
+.stats-box {
+    background: #f8f9fa; border-radius: 12px; padding: 20px;
+    display: flex; justify-content: space-around; align-items: center;
+    flex-wrap: wrap; gap: 20px; border: 1px solid #eee;
+}
+.stat-item { text-align: center; }
+.stat-number { display: block; font-size: 1.8rem; font-weight: bold; color: var(--color-marino); }
+.stat-label { font-size: 0.85rem; color: #777; text-transform: uppercase; letter-spacing: 0.5px; }
+.stat-divider { width: 1px; height: 40px; background: #ddd; }
+
+/* =========================================
+   FOTOS VERTICALES TIPO CELULAR
+   ========================================= */
+.problem-visuals {
+    display: grid;
+    /* Ajustamos el ancho mínimo a 220px para que sean más angostas (tipo móvil) */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.problem-card-visual {
+    background: #fff;
+    border-radius: 15px; /* Bordes más redondeados estilo app */
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08); /* Sombra más flotante */
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s;
+    text-align: center;
+    max-width: 320px; /* Ancho máximo para que no se estiren demasiado */
+    margin: 0 auto; /* Centrar si sobra espacio */
+}
+
+.problem-card-visual:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+/* El contenedor de la imagen vertical */
+.img-wrapper-phone {
+    width: 100%;
+    /* Altura vertical (Tipo historia de whatsapp pero corta) */
+    height: 380px; 
+    overflow: hidden;
+    background: #eee;
+    position: relative;
+}
+
+.img-wrapper-phone img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que la foto llene el espacio sin deformarse */
+    transition: transform 0.5s;
+}
+
+.problem-card-visual:hover img { transform: scale(1.05); }
+
+.problem-card-visual h4 {
+    margin: 20px 0 5px 0;
+    color: #e74c3c; 
+    font-size: 1.15rem;
+}
+
+.problem-card-visual p {
+    font-size: 0.95rem;
+    color: #666;
+    padding: 0 15px 20px 15px;
+    margin: 0;
+}
+
+/* =========================================
+   GRID COMPARATIVO (SOLO SOLUCIÓN)
    ========================================= */
 .comparison-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: grid; grid-template-columns: 1fr; 
     gap: 30px;
 }
 
-.info-card {
-    padding: 25px; border-radius: var(--borde-radio);
-}
-
-.problem { background: #fff5f5; border-top: 4px solid #e74c3c; }
+.info-card { padding: 25px; border-radius: var(--borde-radio); }
 .solution { background: #f0faff; border-top: 4px solid var(--color-claro); }
-
 .info-card h3 { margin-top: 0; font-size: 1.2rem; }
 .info-card ul { padding-left: 20px; }
 .info-card li { margin-bottom: 8px; }
 
 /* =========================================
-   HERRAMIENTAS DE DESARROLLO (MODO CON LOGOS)
+   HERRAMIENTAS DE DESARROLLO
    ========================================= */
 .tech-categories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Un pelín más ancho para que quepa el logo */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     margin-top: 30px;
     text-align: left; 
@@ -194,62 +278,27 @@ hr { border: 0; border-top: 1px solid #eee; margin: 15px 0; }
     transition: transform 0.2s ease;
 }
 
-.tech-card:hover {
-    transform: translateY(-3px); 
-    background: #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
+.tech-card:hover { transform: translateY(-3px); background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 
 .tech-card h3 {
-    font-size: 1.1rem;
-    color: var(--color-marino);
-    margin-top: 0;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #e0e0e0;
-    padding-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    font-size: 1.1rem; color: var(--color-marino); margin-top: 0; margin-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0; padding-bottom: 8px; display: flex; align-items: center; gap: 8px;
 }
 
-.tech-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+.tech-card ul { list-style: none; padding: 0; margin: 0; }
 
-/* Ajuste del item de lista para alinear imagen y texto */
 .tech-card li {
-    font-size: 0.95rem;
-    color: #555;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center; /* Centra el logo y el texto verticalmente */
-    gap: 10px; /* Espacio entre logo y texto */
-    border-bottom: 1px dotted #eee; /* Una línea sutil para separar items */
-    padding-bottom: 5px;
+    font-size: 0.95rem; color: #555; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 10px;
+    border-bottom: 1px dotted #eee; padding-bottom: 5px;
 }
+.tech-card li:last-child { border-bottom: none; }
 
-.tech-card li:last-child {
-    border-bottom: none;
-}
+.tech-icon { width: 24px; height: 24px; object-fit: contain; }
 
-/* Estilos para el LOGO de la herramienta */
-.tech-icon {
-    width: 24px;  /* Tamaño fijo */
-    height: 24px; 
-    object-fit: contain;
-}
-
-/* Estilo para las etiquetas de versión */
 .version {
-    font-size: 0.75rem;
-    background-color: #e9ecef;
-    color: #666;
-    padding: 2px 6px;
-    border-radius: 4px;
-    margin-left: auto; /* Manda la versión a la derecha solita */
-    font-weight: bold;
+    font-size: 0.75rem; background-color: #e9ecef; color: #666;
+    padding: 2px 6px; border-radius: 4px; margin-left: auto; font-weight: bold;
 }
 
 /* =========================================
@@ -261,17 +310,11 @@ hr { border: 0; border-top: 1px solid #eee; margin: 15px 0; }
 }
 
 .gallery-item img {
-    width: 100%; height: auto; border-radius: 8px;
-    border: 1px solid #eee; margin: 0;
-    transition: transform 0.3s;
+    width: 100%; height: auto; border-radius: 8px; border: 1px solid #eee; margin: 0; transition: transform 0.3s;
 }
-
 .gallery-item:hover img { transform: scale(1.02); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 
-.caption {
-    text-align: center; margin-top: 10px; font-size: 0.9rem;
-    font-weight: 600; color: #666;
-}
+.caption { text-align: center; margin-top: 10px; font-size: 0.9rem; font-weight: 600; color: #666; }
 
 /* =========================================
    BOTONES DE DESCARGA
@@ -287,11 +330,7 @@ hr { border: 0; border-top: 1px solid #eee; margin: 15px 0; }
     padding: 20px; border-radius: var(--borde-radio);
     text-decoration: none; transition: 0.3s; text-align: left;
 }
-
-.btn-download:hover {
-    background-color: var(--color-claro); transform: translateY(-3px);
-}
-
+.btn-download:hover { background-color: var(--color-claro); transform: translateY(-3px); }
 .icon-doc { font-size: 2rem; }
 
 /* =========================================
@@ -308,14 +347,12 @@ hr { border: 0; border-top: 1px solid #eee; margin: 15px 0; }
     border: 1px solid #eee; border-top: 4px solid var(--color-claro);
     transition: transform 0.3s;
 }
-
 .student-card:hover { transform: translateY(-5px); box-shadow: var(--sombra-suave); }
 
 .student-photo {
     width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
     border: 3px solid var(--color-claro); padding: 3px; margin-bottom: 15px;
 }
-
 .role { color: var(--color-claro); font-weight: bold; margin: 5px 0; }
 
 /* =========================================
@@ -331,12 +368,7 @@ footer {
    RESPONSIVE (MÓVIL)
    ========================================= */
 @media (max-width: 768px) {
-    .cintillo-gov {
-        height: auto; padding: 10px;
-        flex-direction: column; gap: 10px;
-    }
-    
-    /* En móvil, las imágenes más pequeñas */
+    .cintillo-gov { height: auto; padding: 10px; flex-direction: column; gap: 10px; }
     .cintillo-gov img { height: 40px; }
     
     .hero { padding: 60px 20px 80px; }
@@ -346,4 +378,13 @@ footer {
     nav a { display: block; text-align: center; background: rgba(255,255,255,0.1); }
     
     .uni-header { flex-direction: column; text-align: center; }
+    
+    /* Ajustes Comunidad Móvil */
+    .com-header { flex-direction: column; text-align: center; }
+    .stat-divider { display: none; }
+    .stats-box { flex-direction: column; gap: 15px; }
+    
+    /* Ajuste para que las fotos se vean bien en móvil */
+    .problem-card-visual { max-width: 100%; } 
+    .img-wrapper-phone { height: 320px; } 
 }

@@ -26,7 +26,7 @@ body {
 }
 
 /* =========================================
-   CINTILLO GUBERNAMENTAL
+   CINTILLO GUBERNAMENTAL (PC)
    ========================================= */
 .cintillo-gov {
     background-color: var(--color-blanco);
@@ -51,7 +51,7 @@ body {
 }
 
 /* =========================================
-   HEADER Y NAVEGACIÓN
+   HEADER Y NAVEGACIÓN (INTERACTIVO)
    ========================================= */
 header {
     background-color: var(--color-marino);
@@ -63,12 +63,24 @@ header {
     max-width: 1100px; margin: 0 auto;
 }
 
-nav ul {
-    list-style: none; display: flex; justify-content: center;
-    flex-wrap: wrap; gap: 10px; padding: 15px; margin: 0;
+.navbar {
+    display: flex;
+    justify-content: center; /* Centrado en PC */
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
 }
 
-nav a {
+.nav-links {
+    list-style: none; 
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 10px; 
+    padding: 15px; 
+    margin: 0;
+}
+
+.nav-links li a {
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     font-weight: 600;
@@ -79,10 +91,21 @@ nav a {
     transition: all 0.3s ease;
 }
 
-nav a:hover {
+.nav-links li a:hover {
     background-color: var(--color-claro);
     color: #fff;
     transform: translateY(-2px);
+}
+
+/* Botón Hamburguesa (Oculto en PC por defecto) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
 }
 
 /* =========================================
@@ -97,8 +120,27 @@ nav a:hover {
     padding-bottom: 100px; 
 }
 
+/* Contenedor para centrar logo del sistema y título */
+.hero-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.hero-logo {
+    height: 60px; /* Tamaño del logo del sistema */
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
 .hero h1 {
-    font-size: 2.5rem; margin: 0 0 10px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    font-size: 2.5rem; 
+    margin: 0; 
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .subtitle {
@@ -159,14 +201,14 @@ hr { border: 0; border-top: 1px solid #eee; margin: 15px 0; }
 }
 .com-logo-container { flex-shrink: 0; }
 
-/* --- MODIFICACIÓN DEL LOGO AQUÍ --- */
+/* --- LOGO COMUNIDAD --- */
 .com-logo {
-    width: auto;         /* Ancho automático */
-    height: 120px;       /* Altura fija para buen tamaño */
-    object-fit: contain; /* Muestra el logo completo sin cortar */
-    border-radius: 0;    /* Elimina el círculo */
-    border: none;        /* Elimina bordes extraños */
-    box-shadow: none;    /* Limpio, sin sombra de caja cuadrada */
+    width: auto;        
+    height: 120px;      
+    object-fit: contain; 
+    border-radius: 0;   
+    border: none;       
+    box-shadow: none;   
 }
 
 .com-title h2 { border: none; padding: 0; margin: 0 0 10px 0; font-size: 1.6rem; }
@@ -188,7 +230,6 @@ hr { border: 0; border-top: 1px solid #eee; margin: 15px 0; }
    ========================================= */
 .problem-visuals {
     display: grid;
-    /* Ajustamos el ancho mínimo a 220px para que sean más angostas (tipo móvil) */
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 30px;
     margin-top: 20px;
@@ -197,14 +238,14 @@ hr { border: 0; border-top: 1px solid #eee; margin: 15px 0; }
 
 .problem-card-visual {
     background: #fff;
-    border-radius: 15px; /* Bordes más redondeados estilo app */
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08); /* Sombra más flotante */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     border: 1px solid #f0f0f0;
     transition: transform 0.3s;
     text-align: center;
-    max-width: 320px; /* Ancho máximo para que no se estiren demasiado */
-    margin: 0 auto; /* Centrar si sobra espacio */
+    max-width: 320px;
+    margin: 0 auto;
 }
 
 .problem-card-visual:hover {
@@ -212,10 +253,8 @@ hr { border: 0; border-top: 1px solid #eee; margin: 15px 0; }
     box-shadow: 0 15px 30px rgba(0,0,0,0.12);
 }
 
-/* El contenedor de la imagen vertical */
 .img-wrapper-phone {
     width: 100%;
-    /* Altura vertical (Tipo historia de whatsapp pero corta) */
     height: 380px; 
     overflow: hidden;
     background: #eee;
@@ -225,7 +264,7 @@ hr { border: 0; border-top: 1px solid #eee; margin: 15px 0; }
 .img-wrapper-phone img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Esto hace que la foto llene el espacio sin deformarse */
+    object-fit: cover;
     transition: transform 0.5s;
 }
 
@@ -245,7 +284,7 @@ hr { border: 0; border-top: 1px solid #eee; margin: 15px 0; }
 }
 
 /* =========================================
-   GRID COMPARATIVO (SOLO SOLUCIÓN)
+   GRID COMPARATIVO (SOLUCIÓN)
    ========================================= */
 .comparison-grid {
     display: grid; grid-template-columns: 1fr; 
@@ -368,23 +407,73 @@ footer {
    RESPONSIVE (MÓVIL)
    ========================================= */
 @media (max-width: 768px) {
-    .cintillo-gov { height: auto; padding: 10px; flex-direction: column; gap: 10px; }
-    .cintillo-gov img { height: 40px; }
     
+    /* --- CINTILLO EN UNA SOLA LÍNEA (CORREGIDO) --- */
+    .cintillo-gov {
+        height: 50px; 
+        padding: 0 10px;
+        flex-direction: row; 
+        justify-content: space-between;
+        align-items: center;
+        gap: 0; 
+    }
+    
+    .cintillo-gov img { 
+        height: 80%; 
+        width: auto;
+        max-width: 45%; 
+    }
+    
+    /* Ajustes del Hero Móvil */
     .hero { padding: 60px 20px 80px; }
     .hero h1 { font-size: 1.8rem; }
+    .hero-title-container { flex-direction: column; gap: 10px; }
     
-    nav ul { flex-direction: column; gap: 5px; }
-    nav a { display: block; text-align: center; background: rgba(255,255,255,0.1); }
-    
-    .uni-header { flex-direction: column; text-align: center; }
+    /* --- MENÚ INTERACTIVO --- */
+    .navbar {
+        justify-content: flex-end; /* Botón a la derecha */
+        padding: 10px 20px;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar botón hamburguesa */
+    }
+
+    .nav-links {
+        display: none; /* Ocultar menú por defecto */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%; /* Justo debajo del header */
+        left: 0;
+        background-color: var(--color-marino);
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Clase que añade JS para mostrar el menú */
+    .nav-links.active {
+        display: flex;
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    .nav-links li { width: 100%; margin: 5px 0; }
+    .nav-links li a { display: block; width: 80%; margin: 0 auto; }
     
     /* Ajustes Comunidad Móvil */
     .com-header { flex-direction: column; text-align: center; }
     .stat-divider { display: none; }
     .stats-box { flex-direction: column; gap: 15px; }
     
-    /* Ajuste para que las fotos se vean bien en móvil */
+    /* Ajuste fotos verticales móvil */
     .problem-card-visual { max-width: 100%; } 
     .img-wrapper-phone { height: 320px; } 
+}
+
+/* Animación suave para el menú */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }

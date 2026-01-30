@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Inscripción de Estudiantes | U.E.N. Nuevo Horizonte</title>
-    <link rel="icon" type="image/png" href="img/logo_uni.png">
+    <link rel="icon" type="image/png" href="img/logo_sistema2.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -17,12 +17,16 @@
 
     <header>
         <div class="header-content">
-            <nav>
-                <ul>
+            <nav class="navbar">
+                <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <ul class="nav-links">
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#comunidad">Comunidad</a></li>
-                    <li><a href="#tecnologias">Herramientas</a></li>
                     <li><a href="#solucion">Solución</a></li>
+                    <li><a href="#tecnologias">Herramientas</a></li>
                     <li><a href="#galeria">Demostración</a></li>
                     <li><a href="#manuales">Descargas</a></li>
                     <li><a href="#equipo">Nosotros</a></li>
@@ -33,7 +37,11 @@
 
     <div id="inicio" class="hero">
         <div class="hero-content">
-            <h1>Sistema de Inscripción</h1>
+            <div class="hero-title-container">
+                <img src="img/logo_sistema2.png" alt="Logo Sistema" class="hero-logo">
+                <h1>Sistema de Inscripción</h1>
+            </div>
+            
             <p class="subtitle">U.E.N. "Nuevo Horizonte"</p>
             <p class="description">Modernizando la gestión educativa mediante tecnología web eficiente, segura y soberana.</p>
         </div>
@@ -56,7 +64,6 @@
         </div>
 
         <section id="comunidad">
-            
             <div class="com-header">
                 <div class="com-logo-container">
                     <img src="img/logo_uennh_png.png" alt="Logo U.E.N. Nuevo Horizonte" class="com-logo">
@@ -84,19 +91,16 @@
                 <div class="stat-divider"></div>
                 <div class="stat-item highlight">
                     <span class="stat-number">972</span>
-                    <span class="stat-label">Matrícula Total (Período académico 2024-2025)</span>
+                    <span class="stat-label">Matrícula Total (2024-2025)</span>
                 </div>
             </div>
 
             <hr style="margin: 30px 0; border-top: 1px dashed #ccc;">
 
             <h3 style="color: var(--color-marino); margin-bottom: 20px;">Diagnóstico de la Problemática</h3>
-            <p style="margin-bottom: 20px;">
-                Evidencia fotográfica de la situación (Proceso Manual):
-            </p>
+            <p style="margin-bottom: 20px;">Evidencia fotográfica de la situación actual:</p>
 
             <div class="problem-visuals">
-                
                 <div class="problem-card-visual">
                     <div class="img-wrapper-phone">
                         <img src="img/foto1.jpg" alt="Retraso Administrativo">
@@ -104,7 +108,6 @@
                     <h4>Retraso Administrativo</h4>
                     <p>Libros físicos deteriorados.</p>
                 </div>
-
                 <div class="problem-card-visual">
                     <div class="img-wrapper-phone">
                         <img src="img/foto2.jpg" alt="Lentitud Trámite">
@@ -112,7 +115,6 @@
                     <h4>Lentitud en Trámites</h4>
                     <p>Largas colas de espera.</p>
                 </div>
-
                 <div class="problem-card-visual">
                     <div class="img-wrapper-phone">
                         <img src="img/foto4.jpg" alt="Proceso Saturado">
@@ -120,7 +122,6 @@
                     <h4>Proceso Saturado</h4>
                     <p>Aglomeración de personas.</p>
                 </div>
-
             </div>
 
             <div class="comparison-grid" style="margin-top: 40px;">
@@ -136,115 +137,63 @@
                     </ul>
                 </div>
             </div>
-
         </section>
 
         <section id="tecnologias">
             <h2 style="text-align: center;">Herramientas de Desarrollo</h2>
-            <p style="text-align: center;">Stack tecnológico seleccionado para garantizar rendimiento, seguridad y escalabilidad.</p>
+            <p style="text-align: center;">Stack tecnológico seleccionado para garantizar rendimiento y escalabilidad.</p>
             
             <div class="tech-categories">
                 <div class="tech-card">
                     <h3>📐 Modelado</h3>
                     <ul>
-                        <li>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Diagrams.net_Logo.svg/960px-Diagrams.net_Logo.svg.png" alt="Draw.io" class="tech-icon">
-                            <span>Draw.io</span>
-                        </li>
-                        <li>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL WB" class="tech-icon">
-                            <span>MySQL Workbench</span>
-                        </li>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Diagrams.net_Logo.svg/960px-Diagrams.net_Logo.svg.png" alt="Draw.io" class="tech-icon"><span>Draw.io</span></li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL WB" class="tech-icon"><span>MySQL Workbench</span></li>
                     </ul>
                 </div>
                 <div class="tech-card">
                     <h3>🚀 Servicios</h3>
                     <ul>
-                        <li>
-                            <img src="https://www.apachefriends.org/images/xampp-logo-ac950edf.svg" alt="XAMPP" class="tech-icon">
-                            <span>XAMPP</span>
-                        </li>
-                        <li>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" alt="Apache" class="tech-icon">
-                            <span>Apache</span> <span class="version">v2.4.58</span>
-                        </li>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Xampp_logo.svg/512px-Xampp_logo.svg.png" alt="XAMPP" class="tech-icon"><span>XAMPP</span></li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" alt="Apache" class="tech-icon"><span>Apache</span> <span class="version">v2.4.58</span></li>
                     </ul>
                 </div>
                 <div class="tech-card">
                     <h3>💾 Base de Datos</h3>
                     <ul>
-                        <li>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="tech-icon">
-                            <span>MySQL</span>
-                        </li>
-                        <li>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mariadb/mariadb-original.svg" alt="MariaDB" class="tech-icon">
-                            <span>MariaDB</span> <span class="version">v10.4.32</span>
-                        </li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="tech-icon"><span>MySQL</span></li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mariadb/mariadb-original.svg" alt="MariaDB" class="tech-icon"><span>MariaDB</span> <span class="version">v10.4.32</span></li>
                     </ul>
                 </div>
                 <div class="tech-card">
                     <h3>💻 Lenguajes</h3>
                     <ul>
-                        <li>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="tech-icon">
-                            <span>PHP</span> <span class="version">v8.3.8</span>
-                        </li>
-                        <li>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" class="tech-icon">
-                            <span>JavaScript</span> <span class="version">ES6</span>
-                        </li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="tech-icon"><span>PHP</span> <span class="version">v8.3.8</span></li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" class="tech-icon"><span>JavaScript</span> <span class="version">ES6</span></li>
                     </ul>
                 </div>
                 <div class="tech-card">
                     <h3>🎨 Diseño</h3>
                     <ul>
-                        <li>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="tech-icon">
-                            <span>HTML</span> <span class="version">v5</span>
-                        </li>
-                        <li>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="tech-icon">
-                            <span>CSS</span> <span class="version">v3</span>
-                        </li>
-                        <li>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="tech-icon">
-                            <span>Bootstrap</span> <span class="version">v5.3.8</span>
-                        </li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="tech-icon"><span>HTML</span> <span class="version">v5</span></li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="tech-icon"><span>CSS</span> <span class="version">v3</span></li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="tech-icon"><span>Bootstrap</span> <span class="version">v5.3.8</span></li>
                     </ul>
                 </div>
                 <div class="tech-card">
                     <h3>📚 Librerías</h3>
                     <ul>
-                        <li>
-                            <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF" class="tech-icon">
-                            <span>HTML2PDF</span>
-                        </li>
-                        <li>
-                            <img src="https://cdn-icons-png.flaticon.com/512/2991/2991108.png" alt="Table" class="tech-icon">
-                            <span>DataTables</span>
-                        </li>
+                        <li><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF" class="tech-icon"><span>HTML2PDF</span></li>
+                        <li><img src="https://cdn-icons-png.flaticon.com/512/2991/2991108.png" alt="Table" class="tech-icon"><span>DataTables</span></li>
                     </ul>
                 </div>
                 <div class="tech-card">
                     <h3>🛠️ Complementos</h3>
                     <ul>
-                        <li>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="tech-icon">
-                            <span>Visual Studio Code</span>
-                        </li>
-                        <li>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="tech-icon">
-                            <span>GitHub</span>
-                        </li>
-                        <li>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git Bash" class="tech-icon">
-                            <span>Git Bash</span>
-                        </li>
-                        <li>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Google_Meet_icon_%282020%29.svg/246px-Google_Meet_icon_%282020%29.svg.png" alt="Meet" class="tech-icon">
-                            <span>Google Meet</span>
-                        </li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="tech-icon"><span>Visual Studio Code</span></li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="tech-icon"><span>GitHub</span></li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git Bash" class="tech-icon"><span>Git Bash</span></li>
+                        <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Google_Meet_icon_%282020%29.svg/246px-Google_Meet_icon_%282020%29.svg.png" alt="Meet" class="tech-icon"><span>Google Meet</span></li>
                     </ul>
                 </div>
             </div>
@@ -275,17 +224,11 @@
             <div class="manual-grid">
                 <a href="docs/Manual_Usuario.pdf" class="btn-download" download>
                     <span class="icon-doc">📘</span>
-                    <div>
-                        <strong>Manual de Usuario</strong>
-                        <br><small>Guía para operadores</small>
-                    </div>
+                    <div><strong>Manual de Usuario</strong><br><small>Guía para operadores</small></div>
                 </a>
-                <a href="docs/Manual_Tecnico.pdf" class="btn-download" download>
+                <a href="docs/manual_tecnico_sinho.pdf" class="btn-download" download>
                     <span class="icon-doc">⚙️</span>
-                    <div>
-                        <strong>Manual Técnico</strong>
-                        <br><small>Base de datos y código</small>
-                    </div>
+                    <div><strong>Manual Técnico</strong><br><small>Base de datos y código</small></div>
                 </a>
             </div>
         </section>
@@ -319,6 +262,8 @@
         <p>&copy; 2026 UPTEC "Mariscal Sucre" - PNF. Ing en Informática</p>
         <p style="font-size: 0.8rem; opacity: 0.7;">Desarrollado para la U.E.N Nuevo Horizonte</p>
     </footer>
+
+    <script src="js/main.js"></script>
 
 </body>
 </html>
